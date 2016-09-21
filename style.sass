@@ -14,14 +14,14 @@ $blue: #2c89cc
     margin-top: 10px
   100% 
     margin-top: 0
+
 @keyframes leftWingFlapping
   0%
     transform: rotate(0)
   50%
     transform: rotate(40deg)
   100%
-    transform: rotate(0)
-  
+    transform: rotate(0)  
 @-webkit-keyframes leftWingFlapping
   0%
     transform: rotate(0)
@@ -29,6 +29,7 @@ $blue: #2c89cc
     transform: rotate(40deg)
   100%
     transform: rotate(0)
+
 @keyframes rightWingFlapping
   0%
     transform: rotate(0)
@@ -36,7 +37,6 @@ $blue: #2c89cc
     transform: rotate(-40deg)
   100%
     transform: rotate(0)
-  
 @-webkit-keyframes rightWingFlapping
   0%
     transform: rotate(0)
@@ -44,6 +44,7 @@ $blue: #2c89cc
     transform: rotate(-40deg)
   100%
     transform: rotate(0)
+
 @-webkit-keyframes leftPawFlapping
   0%
     transform: rotate(30deg)
@@ -59,6 +60,10 @@ $blue: #2c89cc
   100%
     transform: rotate(-30deg)
   
+body
+  margin: 0
+  background: #8eccff
+
 .tabino
   position: absolute
   top: 50%
@@ -122,6 +127,7 @@ $blue: #2c89cc
   background: -ms-radial-gradient(center, ellipse cover, rgba(74,158,222,1) 0%, rgba(35,129,187,1) 100%)
   background: radial-gradient(ellipse at center, rgba(74,158,222,1) 0%, rgba(35,129,187,1) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a9ede', endColorstr='#2381bb', GradientType=1 )
+
 .antenna
   position: absolute
   top: -6px
@@ -144,6 +150,7 @@ $blue: #2c89cc
     border-left: 8px solid #265a93
     border-top: 3px solid transparent
     border-right: 8px solid #265a93  
+
 .eye
   position: absolute
   width: 10px
@@ -168,6 +175,7 @@ $blue: #2c89cc
     left: calc(32%)
   &--right
     right: calc(32% - 10px) 
+
 .blush
   position: absolute
   width: 8px
@@ -181,6 +189,7 @@ $blue: #2c89cc
     left: calc(25% - 8px)
   &--right
     right: calc(25% - 8px)
+
 .beak
   position: absolute
   bottom: 18px
@@ -214,6 +223,7 @@ $blue: #2c89cc
     -webkit-border-radius: 100px/50px
     -moz-border-radius: 100px/50px
     border: 2px solid #f36f24
+
 .body
   position: absolute
   left: 50%
