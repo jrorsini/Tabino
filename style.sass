@@ -4,14 +4,14 @@ $blue: #2c89cc
   0%
     margin-top: 0
   50%
-    margin-top: 10px
+    margin-top: 5px
   100% 
     margin-top: 0
 @-webkit-keyframes upDown
   0%
     margin-top: 0
   50%
-    margin-top: 10px
+    margin-top: 5px
   100% 
     margin-top: 0
 
@@ -84,7 +84,6 @@ $blue: #2c89cc
     top: 200px
     left: calc(100% - 200px)
     opacity: 0
-
 @-webkit-keyframes cloudMovingLeft
   0%
     top: 0
@@ -104,7 +103,6 @@ $blue: #2c89cc
     top: 200px
     right: calc(100% - 200px)
     opacity: 0
-
 @-webkit-keyframes cloudMovingRight
   0%
     top: 0
@@ -186,7 +184,6 @@ body
   -webkit-animation-duration: 1s
   -webkit-animation-timing-function: linear
   -webkit-animation-iteration-count: infinite
-
 .clouds_right .cloud
   right: -250px
   animation-name: cloudMovingRight
@@ -391,6 +388,9 @@ body
   width: 40px
   height: 40px
   border-radius: 40px
+  animation: upDown .3s infinite
+  -webkit-animation: upDown .3s infinite
+  animation-delay: 0.5s
   background: rgba(74,158,222,1)
   background: -moz-radial-gradient(center, ellipse cover, rgba(74,158,222,1) 0%, rgba(35,129,187,1) 100%)
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(74,158,222,1)), color-stop(100%, rgba(35,129,187,1)))
@@ -419,14 +419,14 @@ body
       left: -10px
       transform-origin: right top
       -webkit-transform-origin: right top
-      animation: leftWingFlapping .1s infinite
-      -webkit-animation: leftWingFlapping .1s infinite
+      animation: leftWingFlapping .3s infinite
+      -webkit-animation: leftWingFlapping .3s infinite
     &--right
       right: -10px
       transform-origin: right top
       -webkit-transform-origin: left top
-      animation: rightWingFlapping .1s infinite
-      -webkit-animation: rightWingFlapping .1s infinite
+      animation: rightWingFlapping .3s infinite
+      -webkit-animation: rightWingFlapping .3s infinite
   .paw
     position: absolute
     width: 5px
@@ -450,14 +450,14 @@ body
       left: 8px
       transform: rotate(30deg)
       -webkit-transform-origin: left top
-      animation: leftPawFlapping .3s infinite
-      -webkit-animation: leftPawFlapping .3s infinite
+      animation: leftPawFlapping .5s infinite
+      -webkit-animation: leftPawFlapping .5s infinite
     &--right
       right: 8px
       transform: rotate(-30deg)
       -webkit-transform-origin: right top
-      animation: rightPawFlapping .3s infinite
-      -webkit-animation: rightPawFlapping .3s infinite
+      animation: rightPawFlapping .5s infinite
+      -webkit-animation: rightPawFlapping .5s infinite
 
 // Earth
 
