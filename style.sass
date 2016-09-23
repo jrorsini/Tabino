@@ -45,6 +45,13 @@ $blue: #2c89cc
   100%
     transform: rotate(0)
 
+@keyframes leftPawFlapping
+  0%
+    transform: rotate(30deg)
+  50%
+    transform: rotate(20deg)
+  100%
+    transform: rotate(30deg)
 @-webkit-keyframes leftPawFlapping
   0%
     transform: rotate(30deg)
@@ -52,6 +59,14 @@ $blue: #2c89cc
     transform: rotate(20deg)
   100%
     transform: rotate(30deg)
+
+@keyframes rightPawFlapping
+  0%
+    transform: rotate(-30deg)
+  50%
+    transform: rotate(-20deg)
+  100%
+    transform: rotate(-30deg)
 @-webkit-keyframes rightPawFlapping
   0%
     transform: rotate(-30deg)
@@ -59,7 +74,47 @@ $blue: #2c89cc
     transform: rotate(-20deg)
   100%
     transform: rotate(-30deg)
-  
+
+@keyframes cloudMovingLeft
+  0%
+    top: 0
+    left: 0px
+    opacity: 1
+  100%
+    top: 200px
+    left: calc(100% - 200px)
+    opacity: 0
+
+@-webkit-keyframes cloudMovingLeft
+  0%
+    top: 0
+    left: 0px
+    opacity: 1
+  100%
+    top: 200px
+    left: calc(100% - 200px)
+    opacity: 0
+
+@keyframes cloudMovingRight
+  0%
+    top: 0
+    right: 0px
+    opacity: 1
+  100%
+    top: 200px
+    right: calc(100% - 200px)
+    opacity: 0
+
+@-webkit-keyframes cloudMovingRight
+  0%
+    top: 0
+    right: 0px
+    opacity: 1
+  100%
+    top: 200px
+    right: calc(100% - 200px)
+    opacity: 0
+
 body
   margin: 0
   background: #8eccff
@@ -75,7 +130,6 @@ body
   position: absolute
   width: 50%
   height: 600px
-  background: red
   top: 50%
   left: 0
   transform: translateY(-50%)
@@ -84,11 +138,86 @@ body
   position: absolute
   width: 50%
   height: 600px
-  background: red
   top: 50%
   right: 0
   transform: translateY(-50%)
   -webkit-transform: translateY(-50%)
+
+.cloud
+  position: absolute
+  width: 100px
+  height: 40px
+  border-radius: 100px/50px
+  -webkit-border-radius: 100px/50px
+  -moz-border-radius: 100px/50px
+  background: #fff
+  &:before
+    content: ""
+    position: absolute
+    left: -20px
+    bottom: -10px
+    width: 60px
+    height: 30px
+    background: #fff
+    border-radius: 100px/50px
+    -webkit-border-radius: 100px/50px
+    -moz-border-radius: 100px/50px
+  &:after
+    content: ""
+    position: absolute
+    right: -10px
+    bottom: -5px
+    width: 40px
+    height: 20px
+    background: #fff
+    border-radius: 100px/50px
+    -webkit-border-radius: 100px/50px
+    -moz-border-radius: 100px/50px
+.clouds_left .cloud
+  left: -250px
+  animation-name: cloudMovingLeft
+  animation-duration: 1s
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  -webkit-animation-name: cloudMovingLeft
+  -webkit-animation-duration: 1s
+  -webkit-animation-timing-function: linear
+  -webkit-animation-iteration-count: infinite
+
+.clouds_right .cloud
+  right: -250px
+  animation-name: cloudMovingRight
+  animation-duration: 1s
+  animation-timing-function: linear
+  animation-iteration-count: infinite
+  -webkit-animation-name: cloudMovingRight
+  -webkit-animation-duration: 1s
+  -webkit-animation-timing-function: linear
+  -webkit-animation-iteration-count: infinite
+
+.cloud_l_1
+  animation-delay: 0s
+.cloud_l_2
+  animation-delay: .5s
+.cloud_l_3
+  animation-delay: 1s
+.cloud_l_4
+  animation-delay: 1.5s
+.cloud_l_5
+  animation-delay: 2s
+
+.cloud_r_1
+  animation-delay: 0s
+.cloud_r_2
+  animation-delay: .5s
+.cloud_r_3
+  animation-delay: 1s
+.cloud_r_4
+  animation-delay: 1.5s
+.cloud_r_5
+  animation-delay: 2s
+
+
 
 
 .tabino
