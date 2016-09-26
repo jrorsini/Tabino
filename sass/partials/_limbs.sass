@@ -1,0 +1,50 @@
+.wing
+  position: absolute
+  width: 20px
+  height: 25px
+  top: 8px
+  @include background-gradient(#3268ae,#285e9c)
+  @include border-radius(25px)
+  &--left
+    left: -10px
+    transform-origin: right top
+    -webkit-transform-origin: right top
+    animation: leftWingFlapping .3s infinite
+    -webkit-animation: leftWingFlapping .3s infinite
+  &--right
+    right: -10px
+    transform-origin: right top
+    -webkit-transform-origin: left top
+    animation: rightWingFlapping .3s infinite
+    -webkit-animation: rightWingFlapping .3s infinite
+.paw
+  position: absolute
+  width: 5px
+  height: 18px
+  bottom: -13px
+  background: #000
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 7px
+    height: 5px
+    width: 10px
+    background: #000
+  &:before
+    left: -7px
+    transform: rotate(-30deg)
+  &:after
+    right: -7px
+    transform: rotate(30deg)
+  &--left
+    left: 8px
+    transform: rotate(30deg)
+    -webkit-transform-origin: left top
+    animation: leftPawFlapping .5s infinite
+    -webkit-animation: leftPawFlapping .5s infinite
+  &--right
+    right: 8px
+    transform: rotate(-30deg)
+    -webkit-transform-origin: right top
+    animation: rightPawFlapping .5s infinite
+    -webkit-animation: rightPawFlapping .5s infinite
