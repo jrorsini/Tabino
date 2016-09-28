@@ -70,12 +70,16 @@ body
   -webkit-transform: translateX(-50%)
   width: 40px
   height: 40px
-  animation: upDown .3s infinite
-  -webkit-animation: upDown .3s infinite
-  animation-delay: 0.5s
-  @include border-radius(40px)
+.chest
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  -webkit-transform: translateX(-50%)
+  width: 40px
+  height: 40px
+  @include border-radius(40px)  
   @include background-gradient(#4a9ede,#2381bb)
-  
+
 
 // Earth
 
