@@ -1,0 +1,93 @@
+.head
+  position: absolute
+  top: -70px
+  left: 50%
+  transform: translateX(-50%)
+  -webkit-transform: translateX(-50%)
+  width: 100px
+  height: 90px
+  border-radius: 100px/90px
+  z-index: 3
+  @include background-gradient(#4a9ede,#2381bb)
+.antenna
+  position: absolute
+  top: -6px
+  left: 50%
+  transform: translateX(-50%)
+  -webkit-transform: translateX(-50%)
+  width: 4px
+  height: 8px
+  background: #265a93
+  &:after
+    content: ""
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    -webkit-transform: translateX(-50%)
+    width: 0
+    height: 0
+    top: -2px
+    border-bottom: 3px solid transparent
+    border-left: 8px solid #265a93
+    border-top: 3px solid transparent
+    border-right: 8px solid #265a93  
+
+.eye
+  position: absolute
+  width: 10px
+  height: 20px
+  top: 50%
+  transform: translate(-50%,-50%)
+  -webkit-transform: translate(-50%,-50%)
+  background: #0a0404
+  border-radius: 50px/100px
+  &:after
+    content: ""
+    position: absolute
+    right: 2px
+    top: 2px
+    width: 5px
+    height: 5px
+    border-radius: 5px
+    background: rgba(255,255,255,0.5)
+  &--left
+    left: calc(32%)
+  &--right
+    right: calc(32% - 10px) 
+
+.blush
+  position: absolute
+  width: 8px
+  height: 8px
+  top: 60%
+  background: #dd3036
+  border-radius: 8px
+  -webkit-border-radius: 8px
+  -moz-border-radius: 8px
+  &--left
+    left: calc(25% - 8px)
+  &--right
+    right: calc(25% - 8px)
+
+.beak
+  position: absolute
+  bottom: 18px
+  left: 50%
+  transform: translateX(-50%)
+  -webkit-transform: translateX(-50%)
+  width: 40px
+  height: 20px
+  border-radius: 100px/50px
+  overflow: hidden
+  @include background-gradient(#fdb44d,#e89210)
+  &:before
+    content: ""
+    position: absolute
+    bottom: 5px
+    left: 50%
+    transform: translateX(-50%)
+    -webkit-transform: translateX(-50%)
+    width: 40px
+    height: 20px
+    border-radius: 100px/50px
+    border: 2px solid #f36f24
