@@ -40,8 +40,9 @@ body
   z-index: 10
   &:hover 
     animation-duration: 0.15s
-    + body .clouds
-      background: red
+    + .clouds
+      .clouds_left .cloud, .clouds_right .cloud
+        @include animation-duration(0.5s)
 
     .eye
       background: transparent
@@ -79,9 +80,10 @@ body
     .paw
       bottom: -6px
       &--left
-        animation-duration: 0.15s
+        animation-duration: 0.1s
       &--right
-        animation-duration: 0.15s
+        animation-duration: 0.1s
+
 
 .body
   position: absolute
